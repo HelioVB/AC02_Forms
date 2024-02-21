@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC02_Forms</title>
+</head>
+
+<body>
+    <h1><i>INSCRIPCIÓ GRAU SUPERIOR</i></h1>
+    <form id="form" name="form1" action="#" target="_self" method="GET">
+    <fieldset id="DadesPersonals">
+        <legend>Dades Personals</legend>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <label for="nom">Nom:</label> <br />
+                        <input type="text" id="fname" required="" placeholder="Introdueix el teu nom" />
+
+                    </td>
+                    <td>
+                        <label for="cognom">Cognom:</label> <br />
+                        <input type="text" id="lname" required="" placeholder="Introdueix el teu cognom" />
+
+                    </td>
+                    <td>
+                        <label for="dni">DNI:</label><br />
+                        <input type="text" id="fname" required="" minlength="4" placeholder="Introdueix el teu dni"
+                            pattern="[0-9]{8}(?)[A-z&&[^ILÑU]]{1} " />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="loc">Localitat de Naixement:</label><br />
+                        <input type="text" id="loc" required=""
+                            placeholder="Introdueix la teva localitat de naixement" />
+                    </td>
+                    <td>
+                        <label for="loc">Provincia:</label> <br />
+                        <select name="select" id="select">
+                            <option value="barcelona">Barcelona</option>
+                            <option value="bilbao">Bilbao</option>
+                            <option value="san_sebastian">San Sebastian</option>
+                            <option value="a_coruna">A Coruña</option>
+                            <option value="sevilla">Sevilla</option>
+                            <option value="almeria">Almería</option>
+                            <option value="granada">Granada</option>
+                            <option value="albacete">Albacete</option>
+                            <option value="cadiz">Cádiz</option>
+                    </td>
+                    <td>
+                        <label for="data">Data de Naixement:</label> <br />
+                        <input type="date" id="data" name="data" min="1900-01-01" max="01-01-2023" /><br />
+                    </td>
+                <tr>
+                    <td colspan="2">
+                        <label for="direc">Direcció:</label> <br />
+                        <input type="text" id="direc" required="" size="50" placeholder="Introdueix la teva direcció" />
+                    </td>
+                    <td>
+                        <label for="postal">Codi Postal:</label> <br />
+                        <input type="number" id="postal" required="" min="10000" max="99999"
+                            placeholder="Introdueix el teu codi postal" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    <fieldset id="FormaAcces">
+        <legend>Forma d'acces</legend>
+        <table>
+            <tbody>
+                <tr>
+                    <input type="radio" id="radio1" name="radio" />
+                    <label for="radio1">Batxillerat Modalitat:</label>
+                    <input type="text" id="modalitat" /> <br />
+
+                    <input type="radio" id="radio2" name="radio" />
+                    <label for="radio2">COU Opció:</label>
+                    <input type="text" id="modalitat" /><br />
+
+                    <input type="radio" id="radio3" name="radio" />
+                    <label for="radio3">FP Grau Mig. Cicle:</label>
+                    <input type="text" id="modalitat" /><br />
+
+                    <input type="radio" id="radio3" name="radio" />
+                    <label for="radio3">Altres (especificar):</label>
+                    <input type="text" id="modalitat" /><br />
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+    <fieldset id="DocumentsAdjunts">
+        <legend>Documents Adjunts</legend>
+        <table>
+            <tbody>
+                <tr>
+                    <input type="checkbox" id="fotodni" name="fotodni" />
+                    <label for="fotodni">Fotocopia DNI:</label><br />
+
+
+                    <input type="checkbox" id="certificatAC" name="certificatAC" />
+                    <label for="certificatAC">Certificat Acadèmic Selecciona document:</label>
+                    <input type="file" id="certificatAC" name="certificatAC" /><br />
+
+                    <input type="checkbox" id="certificatAC" name="certificatAC" />
+                    <label for="altDoc">Altres documents (especificar):</label>
+                    <input type="text" id="altDoc" />
+                    <input type="file" id="altDoc" name="altDoc" multiple></input><br />
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <input type="submit" name="submit" value="ENVIAR SOLICITUD" /> <br />
+    <input type="reset" name="submit" value="BORRAR SOLICITUD" />
+    </form>
+</body>
+
+</html>
